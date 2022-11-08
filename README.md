@@ -21,3 +21,12 @@ curl --location --request POST 'http://localhost:8000/send-group-message' \
 --data-urlencode 'message=API'
 ```
 
+# How To Run Inside Docker
+- Dev
+```
+docker build -t strongpapazola/whatsapp-api:v2 . && docker run -it --rm --name wacube1 -p 8000:8000 strongpapazola/whatsapp-api:v2
+```
+
+- Prod```
+docker build -t strongpapazola/whatsapp-api:v2 . && docker run -d --restart always --name wacube1 -p 8000:8000 strongpapazola/whatsapp-api:v2
+```
